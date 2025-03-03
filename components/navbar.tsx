@@ -1,14 +1,17 @@
 import Link from "next/link";
-import { TiHome } from "react-icons/ti";
 import { TbLogs } from "react-icons/tb";
 import { RiContactsLine } from "react-icons/ri";
 import { IoInformationCircleOutline } from "react-icons/io5";
 import { GoProjectRoadmap } from "react-icons/go";
+import { HiOutlineComputerDesktop } from "react-icons/hi2";
+import { RiHome3Line } from "react-icons/ri";
+
+
 
 export default function Navbar() {
   return (
-    <nav className=" flex pt-5 pb-5 bg-gray-900 max-w-28 items-center justify-center border-gray-600 border-r-2 outline-blue-950 flex-col">
-     <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-gray-500 mt-20 ">
+    <nav className=" flex pt-5 pb-5 bg-[#0f1930a2] max-w-44 items-center justify-center border-gray-800 border-r-2 outline-blue-950 flex-col">
+     <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-gray-700  ">
         {/* <Image 
           src="/profile.jpg" // Change to your actual image path
           alt="Profile Picture"
@@ -18,11 +21,11 @@ export default function Navbar() {
         /> */}
         
       </div>
-      <ul className="justify-center gap-12 text-xl flex flex-col min-h-screen -mt-20">
+      <ul className="justify-center gap-12 flex flex-col min-h-screen -mt-8">
         {/* Home */}
         <li className="group relative">
           <Link href="/">
-            <TiHome className="text-2xl" />
+            <RiHome3Line className="text-3xl opacity-60" />
           </Link>
           <span className="absolute left-12 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">
             Home
@@ -32,7 +35,8 @@ export default function Navbar() {
         {/* Projects */}
         <li className="group relative">
           <Link href="/projects">
-            <GoProjectRoadmap className="text-2xl" />
+          <HiOutlineComputerDesktop className="text-3xl opacity-60" />
+
           </Link>
           <span className="absolute left-12 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">
             Projects
@@ -42,7 +46,7 @@ export default function Navbar() {
         {/* About */}
         <li className="group relative">
           <Link href="/about">
-            <IoInformationCircleOutline className="text-2xl" />
+            <IoInformationCircleOutline className="text-3xl opacity-60" />
           </Link>
           <span className="absolute left-12 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">
             About
@@ -52,7 +56,7 @@ export default function Navbar() {
         {/* Contact */}
         <li className="group relative">
           <Link href="/contact">
-            <RiContactsLine className="text-2xl" />
+            <RiContactsLine className="text-3xl opacity-60" />
           </Link>
           <span className="absolute left-12 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">
             Contact
@@ -62,10 +66,18 @@ export default function Navbar() {
         {/* Blogs */}
         <li className="group relative">
           <Link href="/blogs">
-            <TbLogs className="text-2xl" />
+            <TbLogs className="text-3xl opacity-60" />
           </Link>
           <span className="absolute left-12 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">
             Blogs
+          </span>
+        </li>
+        <li className="group relative">
+          <Link href="/resume">
+            <GoProjectRoadmap className="text-3xl opacity-60" />
+          </Link>
+          <span className="absolute left-12 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+            Resume
           </span>
         </li>
       </ul>
