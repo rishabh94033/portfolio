@@ -9,7 +9,7 @@ import LatestProjects from "@/components/latestProj";
 export default function Home() {
   return (
     
-    <div className="bg-[#16223eb5] flex ">
+    <div className="bg-gray-950 flex ">
       <div className="fixed top-0 left-0 flex-shrink-0 min-w-44 mr-20 ">
       <Navbar></Navbar>
       </div>

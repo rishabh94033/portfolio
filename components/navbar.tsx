@@ -7,10 +7,9 @@ import { HiOutlineComputerDesktop } from "react-icons/hi2";
 import { RiHome3Line } from "react-icons/ri";
 
 
-
 export default function Navbar() {
   return (
-    <nav className=" flex pt-5 pb-5 bg-[#0f1930a2] max-w-44 items-center justify-center border-gray-800 border-r-2 outline-blue-950 flex-col">
+    <nav className=" flex pt-5 pb-5 bg-gray-950 max-w-44 items-center justify-center border-gray-800 border-r-2 outline-blue-950 flex-col">
      <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-gray-700  ">
         {/* <Image 
           src="/profile.jpg" // Change to your actual image path
@@ -25,7 +24,7 @@ export default function Navbar() {
         {/* Home */}
         <li className="group relative">
           <Link href="/">
-            <RiHome3Line className="text-3xl opacity-60" />
+            <RiHome3Line className="text-3xl opacity-60 hover:text-blue-400" />
           </Link>
           <span className="absolute left-12 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">
             Home
@@ -35,7 +34,7 @@ export default function Navbar() {
         {/* Projects */}
         <li className="group relative">
           <Link href="/projects">
-          <HiOutlineComputerDesktop className="text-3xl opacity-60" />
+          <HiOutlineComputerDesktop className="text-3xl opacity-60  hover:text-blue-400" />
 
           </Link>
           <span className="absolute left-12 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">
@@ -46,7 +45,7 @@ export default function Navbar() {
         {/* About */}
         <li className="group relative">
           <Link href="/about">
-            <IoInformationCircleOutline className="text-3xl opacity-60" />
+            <IoInformationCircleOutline className="text-3xl opacity-60 hover:text-blue-400" />
           </Link>
           <span className="absolute left-12 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">
             About
@@ -56,7 +55,7 @@ export default function Navbar() {
         {/* Contact */}
         <li className="group relative">
           <Link href="/contact">
-            <RiContactsLine className="text-3xl opacity-60" />
+            <RiContactsLine className="text-3xl opacity-60 hover:text-blue-400" />
           </Link>
           <span className="absolute left-12 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">
             Contact
@@ -66,7 +65,7 @@ export default function Navbar() {
         {/* Blogs */}
         <li className="group relative">
           <Link href="/blogs">
-            <TbLogs className="text-3xl opacity-60" />
+            <TbLogs className="text-3xl opacity-60 hover:text-blue-400" />
           </Link>
           <span className="absolute left-12 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">
             Blogs
@@ -74,7 +73,7 @@ export default function Navbar() {
         </li>
         <li className="group relative">
           <Link href="/resume">
-            <GoProjectRoadmap className="text-3xl opacity-60" />
+            <GoProjectRoadmap className="text-3xl opacity-60 hover:text-blue-400" />
           </Link>
           <span className="absolute left-12 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">
             Resume

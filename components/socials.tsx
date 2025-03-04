@@ -20,7 +20,7 @@ export default function Socials() {
           <SlSocialLinkedin className="transition-transform duration-200 hover:scale-125 hover:rotate-12 hover:text-blue-500" />
         </a>
 
-        <a href="#" target="_blank" rel="noopener noreferrer">
+        <a href="mailto:rishabh94033@gmail.com" target="_blank" rel="noopener noreferrer">
           <MdOutlineMarkEmailUnread className="transition-transform duration-200 hover:rotate-12 hover:scale-125 hover:text-orange-500" />
         </a>
       </div>
@@ -29,10 +29,10 @@ export default function Socials() {
       
       
     <div className="mt-10 text-2xl text-blue-400 font-medium flex items-center">
+        ...I create content too ( 
     <a href="https://x.com/Rishabh94033" target="_blank" rel="noopener noreferrer">
-        
-        ...I create content too (<FaTwitter className="ml-1 text-blue-400 hover:text-blue-500 transition-transform duration-200 hover:scale-110" />)
-        </a>
+          <FaTwitter className="ml-1 text-white hover:text-blue-500 transition-transform duration-200 hover:scale-110" />
+        </a>)
       </div>
     </div>
   );

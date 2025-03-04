@@ -9,9 +9,9 @@ export default function Intro(){
   <span className="font-semibold text-red-400 relative inline-block">
     {/* Text */}
     <span className="relative z-10 ">full-stack</span>
+    <span className="absolute inset-0 bg-red-200 transform rotate-[-3deg] -z-8 rounded-md"></span>
 
     {/* Rotated Background */}
-    <span className="absolute inset-0 bg-red-200 transform rotate-[-3deg] -z-10"></span>
   </span> experiences that <br></br>users can't get <span className="text-green-400 font-semibold">enough of.</span>
       </div>
       <div className="mt-8 text-2xl font-medium text-gray-400">
