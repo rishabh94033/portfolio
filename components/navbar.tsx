@@ -54,11 +54,11 @@ export default function Navbar() {
 
         {/* Contact */}
         <li className="group relative">
-          <Link href="/contactMe">
+          <Link href="/SignMyGuestBook">
             <RiContactsLine className="text-3xl opacity-60 hover:text-blue-400" />
           </Link>
           <span className="absolute left-12 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-            Contact
+          SignMyGuestBook
           </span>
         </li>
 

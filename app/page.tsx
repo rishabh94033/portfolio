@@ -32,6 +32,9 @@ export default function Home() {
       <div>
         <LatestProjects></LatestProjects>
       </div>
+      <div>
+        
+      </div>
     </div>
     </div>
   );
