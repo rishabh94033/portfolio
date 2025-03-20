@@ -7,7 +7,6 @@ import LatestProjects from "@/components/latestProj";
 import SpotifyPlaylist from "@/components/playlist";
 import BuyMeCoffee from "@/components/buyMeCoffee";
 import ThankYouNote from "@/components/thank-you-note";
-import SpotifyPlaylistTest from "@/components/spotify-playlist-test";
 
 
 export default function Home() {

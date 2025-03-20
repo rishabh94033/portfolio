@@ -8,13 +8,13 @@ import { Music, Play, Pause, ExternalLink, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
-interface Track {
-  title: string
-  artist: string
-  albumArt: string
-  duration: string
-  url: string
-}
+// interface Track {
+//   title: string
+//   artist: string
+//   albumArt: string
+//   duration: string
+//   url: string
+// }
 
 export default function SpotifyPlaylist() {
   const [isExpanded, setIsExpanded] = useState(false)

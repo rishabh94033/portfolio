@@ -2,7 +2,6 @@
 
 import AllProjects from "@/components/allProjects";
 import Navbar from "@/components/navbar";
-import ComingSoon from "@/components/upcoming";
 import { motion } from "framer-motion";
 
 export default function Projects() {

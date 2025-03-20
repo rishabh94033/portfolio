@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 
 export default function ComingSoon() {
-  const targetDate = new Date("2025-06-01T00:00:00"); // Set your launch date
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  // Use useMemo to prevent re-creation of the Date object on every render
+  const targetDate = useMemo(() => new Date("2025-06-01T00:00:00"), []);
 
-  function calculateTimeLeft() {
+  const calculateTimeLeft = useCallback(() => {
     const difference = +targetDate - +new Date();
     return {
       days: Math.floor(difference / (1000 * 60 * 60 * 24)),
@@ -14,18 +14,20 @@ export default function ComingSoon() {
       minutes: Math.floor((difference / 1000 / 60) % 60),
       seconds: Math.floor((difference / 1000) % 60),
     };
-  }
+  }, [targetDate]); // Now `targetDate` is stable
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft);
 
   useEffect(() => {
     const timer = setInterval(() => setTimeLeft(calculateTimeLeft()), 1000);
     return () => clearInterval(timer);
-  }, []);
+  }, [calculateTimeLeft]); // Now `calculateTimeLeft` is stable
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-950 text-white px-4">
       <h1 className="text-5xl font-bold text-white mb-4 animate-fade-in">🚀 Coming Soon</h1>
       <p className="text-lg text-gray-400 animate-fade-in delay-200">
-        I'm working on something awesome. Stay tuned!
+        I&apos;m working on something awesome. Stay tuned!
       </p>
 
       {/* Countdown Timer */}

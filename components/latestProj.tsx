@@ -134,15 +134,15 @@ function ProjectCard({
   mousePosition: { x: number; y: number }
 }) {
   const cardRef = useRef<HTMLDivElement>(null)
-  const [cardPosition, setCardPosition] = useState({ x: 0, y: 0 })
+  // const [cardPosition, setCardPosition] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
     if (cardRef.current) {
-      const rect = cardRef.current.getBoundingClientRect()
-      setCardPosition({
-        x: rect.left,
-        y: rect.top,
-      })
+      // const rect = cardRef.current.getBoundingClientRect()
+      // setCardPosition({
+      //   x: rect.left,
+      //   y: rect.top,
+      // })
     }
   }, [])
 

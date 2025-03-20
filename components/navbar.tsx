@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { TbLogs } from "react-icons/tb";
-import { RiContactsLine } from "react-icons/ri";
 import { IoInformationCircleOutline } from "react-icons/io5";
 import { GoProjectRoadmap } from "react-icons/go";
 import { HiOutlineComputerDesktop } from "react-icons/hi2";
