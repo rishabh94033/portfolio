@@ -4,6 +4,10 @@ import GitHubCalendar from 'react-github-calendar';
 import Socials from '@/components/socials'
 import Intro from '@/components/intro'
 import LatestProjects from "@/components/latestProj";
+import SpotifyPlaylist from "@/components/playlist";
+import BuyMeCoffee from "@/components/buyMeCoffee";
+import ThankYouNote from "@/components/thank-you-note";
+import SpotifyPlaylistTest from "@/components/spotify-playlist-test";
 
 
 export default function Home() {
@@ -33,8 +37,17 @@ export default function Home() {
         <LatestProjects></LatestProjects>
       </div>
       <div>
-        
+        <SpotifyPlaylist></SpotifyPlaylist>
       </div>
+      <div>
+        <BuyMeCoffee></BuyMeCoffee>
+      </div>
+      <div className="flex justify-center ml-80">
+  <ThankYouNote />
+</div>
+{/* <div>
+  <SpotifyPlaylistTest />
+</div> */}
     </div>
     </div>
   );

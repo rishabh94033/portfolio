@@ -5,6 +5,8 @@ import { IoInformationCircleOutline } from "react-icons/io5";
 import { GoProjectRoadmap } from "react-icons/go";
 import { HiOutlineComputerDesktop } from "react-icons/hi2";
 import { RiHome3Line } from "react-icons/ri";
+import { IoMdBook } from "react-icons/io";
+
 
 
 export default function Navbar() {
@@ -55,7 +57,7 @@ export default function Navbar() {
         {/* Contact */}
         <li className="group relative">
           <Link href="/SignMyGuestBook">
-            <RiContactsLine className="text-3xl opacity-60 hover:text-blue-400" />
+            <IoMdBook className="text-3xl opacity-60 hover:text-blue-400" />
           </Link>
           <span className="absolute left-12 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">
           SignMyGuestBook
