@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { ArrowUpRight, ExternalLink } from "lucide-react"
@@ -60,20 +60,20 @@ export default function LatestProjects({ projects = defaultProjects }: { project
   }
 
   return (
-    <div className="w-full py-20 bg-gray-950 text-white" id="projects">
+    <div className="w-full lg:py-20 py-10 bg-gray-950 text-white" id="projects">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="max-w-3xl"
       >
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
+        <div className="flex md:flex-row justify-between items-start md:items-end mb-12">
           <div>
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-block px-4 py-1 rounded-full bg-gray-800 text-gray-300 text-lg font-medium mb-4"
+              className="inline-block px-4 py-1 rounded-full bg-gray-800 text-gray-300 lg:text-lg lg:text-md font-medium mb-4 text-sm"
             >
               Latest Work
             </motion.div>
@@ -81,7 +81,7 @@ export default function LatestProjects({ projects = defaultProjects }: { project
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-4xl md:text-4xl font-bold tracking-tight"
+              className="text-2xl lg:text-4xl md:text-4xl font-bold tracking-tight"
             >
               Featured Projects
             </motion.h2>
@@ -89,7 +89,7 @@ export default function LatestProjects({ projects = defaultProjects }: { project
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.4 }}>
             <Link
               href="/projects"
-              className="group flex items-center text-gray-400 hover:text-white transition-colors duration-300"
+              className="group flex items-center text-gray-400 hover:text-white pt-12 pr-6 transition-colors duration-300"
             >
               View all projects
               <ArrowUpRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -97,11 +97,11 @@ export default function LatestProjects({ projects = defaultProjects }: { project
           </motion.div>
         </div>
 
-
+    <div className="flex justify-center">
         <div
           ref={containerRef}
           onMouseMove={handleMouseMove}
-          className="relative grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl"
+          className="relative grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl lg:ml-0"
           >
           {projects.map((project, index) => (
               <ProjectCard
@@ -114,6 +114,7 @@ export default function LatestProjects({ projects = defaultProjects }: { project
               />
             ))}
         </div>
+      </div>
             
       </motion.div>
     </div>
@@ -134,17 +135,9 @@ function ProjectCard({
   mousePosition: { x: number; y: number }
 }) {
   const cardRef = useRef<HTMLDivElement>(null)
-  // const [cardPosition, setCardPosition] = useState({ x: 0, y: 0 })
 
-  useEffect(() => {
-    if (cardRef.current) {
-      // const rect = cardRef.current.getBoundingClientRect()
-      // setCardPosition({
-      //   x: rect.left,
-      //   y: rect.top,
-      // })
-    }
-  }, [])
+
+ 
 
   const calculateRotation = () => {
     if (!isActive || !cardRef.current) return { x: 0, y: 0 }
@@ -177,7 +170,7 @@ function ProjectCard({
       }}
       className="group relative max-w-md"
     >
-      <Link href={`/projects/${project.slug}`} className="block w-full">
+      <Link href={`/projects/${project.slug}`} className="block lg:w-full mx-6 -z-50">
         <motion.div
           animate={{
             rotateX: isActive ? rotation.x : 0,
@@ -206,19 +199,19 @@ function ProjectCard({
           <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-60 z-0" />
 
           <div className="relative z-10">
-            <div className="flex justify-between items-start mb-8">
+            <div className="flex justify-between items-start mb-3 ">
               <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10, delay: index * 0.2 + 0.7 }}
-                className="w-16 h-16 rounded-2xl flex items-center justify-center backdrop-blur-md"
+                className="lg:w-16 lg:h-16 w-12 h-12 rounded-2xl flex items-center justify-center backdrop-blur-md"
                 style={{
                   backgroundColor: `${project.color}20` || "#8B5CF620",
                   boxShadow: `0 0 20px ${project.color}30` || "0 0 20px #8B5CF630",
                   border: `1px solid ${project.color}40` || "1px solid #8B5CF640",
                 }}
               >
-                <span className="text-2xl font-bold" style={{ color: project.color || "#8B5CF6" }}>
+                <span className="lg:text-2xl text-lg font-bold" style={{ color: project.color || "#8B5CF6" }}>
                   {project.name.charAt(0)}
                 </span>
               </motion.div>
@@ -233,7 +226,7 @@ function ProjectCard({
             </div>
 
             <motion.h3
-              className="text-3xl font-bold mb-3 text-white group-hover:text-white transition-colors duration-300"
+              className="lg:text-3xl text-2xl font-bold mb-3 text-white group-hover:text-white transition-colors duration-300"
               style={{
                 textShadow: isActive ? `0 0 20px ${project.color}30` : "none",
               }}
@@ -241,13 +234,13 @@ function ProjectCard({
               {project.name}
             </motion.h3>
 
-            <p className="text-gray-400 mb-8 text-lg group-hover:text-gray-300 transition-colors duration-300 max-w-2xl">
+            <p className="text-gray-400 lg:mb-8  mb-4 text-lg group-hover:text-gray-300 transition-colors duration-300 max-w-2xl">
               {project.description}
             </p>
           </div>
 
           <div>
-            <div className="flex flex-wrap gap-2 mb-6">
+            <div className="flex flex-wrap gap-2 lg:mb-6">
               {project.techStack.map((tech, techIndex) => (
                 <motion.span
                   key={tech}

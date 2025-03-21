@@ -6,14 +6,14 @@ import { motion } from "framer-motion";
 
 export default function Projects() {
   return (
-    <div className="bg-gray-950">
-      <div className="fixed top-0 left-0 flex-shrink-0 min-w-44 mr-20">
-        <Navbar />
+    <div className="bg-gray-950 lg:pl-0  pr-3 lg:pr-0">
+    <div className="fixed -bottom-4 w-full h-20 lg:top-0 lg:left-0 lg:w-44 lg:h-screen z-50  ">
+    <Navbar />
       </div>
 
-      <div className="ml-44 pl-20 bg-gray-950">
+      <div className="lg:ml-44  pl-6 lg:pl-20 bg-gray-950">
         <motion.div 
-          className="text-6xl pt-24 font-semibold text-white"
+          className="lg:text-6xl text-4xl lg:pt-24  pt-10 font-semibold text-white"
           initial={{ opacity: 0, y: -50, scale: 0.8 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
@@ -38,7 +38,7 @@ export default function Projects() {
           </motion.span>
         </motion.div>
 
-        <div className="mt-10">
+        <div className="mt-10 pb-20">
           <AllProjects />
         </div>
       </div>

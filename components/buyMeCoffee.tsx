@@ -23,7 +23,7 @@ export default function BuyMeCoffee() {
   const amounts = [3, 5, 10]
 
   return (
-    <div className="fixed bottom-6 left-16 z-50">
+    <div className="fixed lg:bottom-6 bottom-16 lg:left-16 z-50">
       <AnimatePresence>
         {isExpanded ? (
           <motion.div

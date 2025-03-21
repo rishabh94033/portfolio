@@ -7,7 +7,7 @@ export default function Socials() {
   return (
     <div>
       {/* Social Icons with Links */}
-      <div className="text-4xl mt-24 flex gap-12">
+      <div className=" text-2xl lg:text-4xl lg:mt-24 mt-8 flex lg:gap-12 gap-6">
         <a href="https://x.com/Rishabh94033" target="_blank" rel="noopener noreferrer">
           <FaTwitter className="transition-transform duration-200 hover:scale-125 hover:text-blue-500 hover:rotate-12" />
         </a>
@@ -28,7 +28,7 @@ export default function Socials() {
       {/* Text with Twitter Icon */}
       
       
-    <div className="mt-10 text-2xl text-blue-400 font-medium flex items-center">
+    <div className="lg:mt-10 mt-6 text-xl lg:text-2xl text-blue-400 font-medium flex items-center">
         ...I create content too ( 
     <a href="https://x.com/Rishabh94033" target="_blank" rel="noopener noreferrer">
           <FaTwitter className="ml-1 text-white hover:text-blue-500 transition-transform duration-200 hover:scale-110" />

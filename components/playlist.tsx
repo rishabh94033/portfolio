@@ -113,7 +113,7 @@ export default function SpotifyPlaylist() {
   const currentTrack = playlist.tracks[currentTrackIndex]
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed lg:bottom-6 bottom-16 right-6 z-50">
       <AnimatePresence>
         {isExpanded ? (
           <motion.div

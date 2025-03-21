@@ -5,8 +5,8 @@ import ComingSoon from "@/components/upcoming";
 export default function Blogs() {
     return (
     <div className="bg-gray-950">
-<div className="fixed top-0 left-0 flex-shrink-0 min-w-44 mr-20 ">
-      <Navbar></Navbar>
+    <div className="fixed -bottom-4  w-full h-20 lg:top-0 lg:left-0 lg:w-44 lg:h-screen z-50  ">
+    <Navbar></Navbar>
       </div>
 <div>
     <ComingSoon></ComingSoon>

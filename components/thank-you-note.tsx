@@ -13,7 +13,7 @@ export default function ThankYouNote({ className = "" }: ThankYouNoteProps) {
 
   return (
     <motion.div
-      className={`bg-[#0f1029] border border-gray-800 rounded-lg p-3 inline-flex items-center ${className}`}
+      className={` mb-20 bg-[#0f1029] border border-gray-800 rounded-lg p-3 inline-flex items-center ${className}`}
       initial={{ opacity: 0.9 }}
       whileHover={{
         opacity: 1,
@@ -33,7 +33,7 @@ export default function ThankYouNote({ className = "" }: ThankYouNoteProps) {
       >
         <Heart size={16} className={isHovered ? "fill-red-400" : ""} />
       </motion.div>
-      <span className="text-lg text-gray-300">Thanks for visiting!</span>
+      <span className="text-lg text-gray-300 ">Thanks for visiting!</span>
     </motion.div>
   )
 }
