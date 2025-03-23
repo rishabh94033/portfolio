@@ -8,6 +8,7 @@ import BuyMeCoffee from "@/components/buyMeCoffee";
 import ThankYouNote from "@/components/thank-you-note";
 import GitHub from "@/components/github";
 import SpotifyPlaylistBanner from "@/components/spotify-playlist-banner";
+import GuestBookSideComponent from "@/components/guestbookSideComponent";
 
 
 export default function Home() {
@@ -42,10 +43,13 @@ export default function Home() {
 </div>
 
     </div>
-    <div className="lg:mt-96 lg:pr-7 lg:pl-0 pl-5 pr-3 pb-24"> {/*// right main div*/}
+    <div className="lg:mt-96 lg:pr-10 lg:pl-0 pl-8 pr-8 pb-24"> {/*// right main div*/}
     <div>
   <SpotifyPlaylistBanner />
-</div>  
+</div>
+<div>
+<GuestBookSideComponent />
+  </div>  
       <div>
       </div>
     </div>

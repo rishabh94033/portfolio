@@ -1,6 +1,7 @@
 "use client";
 
 import AllProjects from "@/components/allProjects";
+import GuestBookSideComponent from "@/components/guestbookSideComponent";
 import Navbar from "@/components/navbar";
 import SpotifyPlaylistBanner from "@/components/spotify-playlist-banner";
 import { motion } from "framer-motion";
@@ -47,6 +48,9 @@ export default function Projects() {
         <div>
           <SpotifyPlaylistBanner />
         </div> 
+        <div>
+        <GuestBookSideComponent />
+          </div>
       </div>
     </div>
   );
