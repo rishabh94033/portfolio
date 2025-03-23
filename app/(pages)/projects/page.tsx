@@ -2,16 +2,17 @@
 
 import AllProjects from "@/components/allProjects";
 import Navbar from "@/components/navbar";
+import SpotifyPlaylistBanner from "@/components/spotify-playlist-banner";
 import { motion } from "framer-motion";
 
 export default function Projects() {
   return (
-    <div className="bg-gray-950 lg:pl-0  pr-3 lg:pr-0">
+    <div className="bg-gray-950 lg:pl-0  pr-3 lg:pr-0 flex flex-col lg:flex-row"> {/*//main div*/}
     <div className="fixed -bottom-4 w-full h-20 lg:top-0 lg:left-0 lg:w-44 lg:h-screen z-50  ">
     <Navbar />
       </div>
 
-      <div className="lg:ml-44  pl-6 lg:pl-20 bg-gray-950">
+      <div className="lg:ml-44  pl-6 lg:pl-20 bg-gray-950">  {/*// middle main div*/} 
         <motion.div 
           className="lg:text-6xl text-4xl lg:pt-24  pt-10 font-semibold text-white"
           initial={{ opacity: 0, y: -50, scale: 0.8 }}
@@ -41,6 +42,11 @@ export default function Projects() {
         <div className="mt-10 pb-20">
           <AllProjects />
         </div>
+      </div>
+      <div className="lg:mt-64 lg:ml-80 lg:pr-16 pl-5 pr-3 pb-24">  {/*// right main div*/}
+        <div>
+          <SpotifyPlaylistBanner />
+        </div> 
       </div>
     </div>
   );

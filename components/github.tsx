@@ -8,12 +8,12 @@ const [fontSize, setFontSize] = useState(17);
   useEffect(() => {
     const updateBlockSize = () => {
       if (window.innerWidth < 400) {
-        setBlockSize(3);
+        setBlockSize(9);
         setFontSize(10);
         
       }
       if (window.innerWidth < 950) {
-        setBlockSize(5);
+        setBlockSize(9);
         setFontSize(12);
         
       } else {

@@ -3,10 +3,11 @@ import Navbar from "@/components/navbar";
 import Socials from '@/components/socials'
 import Intro from '@/components/intro'
 import LatestProjects from "@/components/latestProj";
-import SpotifyPlaylist from "@/components/playlist";
+import SpotifyPlaylist from "@/components/playlistFixedIcon";
 import BuyMeCoffee from "@/components/buyMeCoffee";
 import ThankYouNote from "@/components/thank-you-note";
 import GitHub from "@/components/github";
+import SpotifyPlaylistBanner from "@/components/spotify-playlist-banner";
 
 
 export default function Home() {
@@ -30,24 +31,22 @@ export default function Home() {
       <div>
         <LatestProjects></LatestProjects>
       </div>
-      <div>
+      {/* <div>
         <SpotifyPlaylist></SpotifyPlaylist>
-      </div>
+      </div> */}
       <div>
         <BuyMeCoffee></BuyMeCoffee>
       </div>
       <div className="flex justify-center lg:ml-80">
-  <ThankYouNote />
+  {/* <ThankYouNote /> */}
 </div>
-{/* <div>
-  <SpotifyPlaylistTest />
-</div> */}
+
     </div>
-    <div> {/*// right main div*/}
+    <div className="lg:mt-96 lg:pr-7 lg:pl-0 pl-5 pr-3 pb-24"> {/*// right main div*/}
+    <div>
+  <SpotifyPlaylistBanner />
+</div>  
       <div>
-        {/* <div>
-  <SpotifyPlaylistTest />
-</div> */}
       </div>
     </div>
     </div>
