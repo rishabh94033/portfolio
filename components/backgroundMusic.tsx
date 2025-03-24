@@ -6,7 +6,7 @@ const BackgroundMusic = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    const audio = new Audio("/audio/awake.mp3");
+    const audio = new Audio("/audio/Pufino - Awake (freetouse.com).mp3");
     audio.loop = true;
     audio.volume = 0.5;
     audioRef.current = audio;
