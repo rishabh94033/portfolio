@@ -2,7 +2,7 @@ export default function ResumeIntro() {
     return (
       <div className="text-white">
         {/* Title */}
-        <h1 className="text-6xl font-extrabold text-blue-400 lg:mb-16 mb-8">Resume</h1>
+        <h1 className="text-6xl font-extrabold text-red-200 lg:mb-16 mb-8">Resume</h1>
   
         {/* Description */}
         <p className="text-xl max-w-2xl text-gray-300 leading-relaxed">

@@ -23,7 +23,7 @@ const defaultProjects: Project[] = [
     name: "GenMedX",
     description: "GenMedX is a smart medical records app with AI-powered insights, document scanning, and seamless prescription tracking.",
     techStack: ["React Native", "TypeScript", "Prisma"],
-    slug: "ecommerce-platform",
+    slug: "GenMedX",
     color: "#e0a6df",
   },
   {
@@ -31,7 +31,7 @@ const defaultProjects: Project[] = [
     name: "TechTales",
     description: "TechTales is a blog where technology meets storytelling, delivering insights, trends, and innovations in an engaging way.",
     techStack: ["React", "Node.js", "TypeScript", "Postgres"],
-    slug: "ai-content-generator",
+    slug: "Tech-Tales",
     color: "#afdcde",
   },
   // {
@@ -170,7 +170,8 @@ function ProjectCard({
       }}
       className="group relative max-w-md"
     >
-      <Link href={`/projects/${project.slug}`} className="block lg:w-full mx-6 -z-50">
+      <Link href={`https://github.com/rishabh94033/${project.slug}`} target="_blank" 
+  rel="noopener noreferrer" className="block lg:w-full mx-6 -z-50">
         <motion.div
           animate={{
             rotateX: isActive ? rotation.x : 0,

@@ -23,7 +23,7 @@ const defaultProjects: Project[] = [
     name: "GenMedX",
     description: "GenMedX is a smart medical records app with AI-powered insights, document scanning, and seamless prescription tracking.",
     techStack: ["React Native", "TypeScript", "Prisma"],
-    slug: "ecommerce-platform",
+    slug: "GenMedX",
     color: "#f0e2e1",
   },
   {
@@ -31,17 +31,50 @@ const defaultProjects: Project[] = [
     name: "TechTales",
     description: "TechTales is a blog where technology meets storytelling, delivering insights, trends, and innovations in an engaging way.",
     techStack: ["React", "Node.js", "TypeScript", "Postgres"],
-    slug: "ai-content-generator",
+    slug: "Tech-Tales",
     color: "#f0e2e1",
   },
   {
     id: "3",
-    name: "Crypto Dashboard",
-    description: "Real-time cryptocurrency tracking dashboard with customizable alerts",
-    techStack: ["Vue.js", "Express", "WebSockets", "Chart.js"],
-    slug: "crypto-dashboard",
-    color: "#f0e2e1",
-  },
+    name: "Battery-Managent-System-for-Vehicle",
+    description: "A smart battery management system for vehicles that monitors performance, predicts maintenance needs, and optimizes efficiency.",
+    techStack: ["Next.js", "Tailwind", "ShadCn"],
+    slug: "Battery-Managent-System-for-Vehicle",
+    color: "#f0e2e1"
+},
+{
+    id: "4",
+    name: "Paytm-Lite",
+    description: "A lightweight version of Paytm with essential features like payments, wallet management, and transaction history.",
+    techStack: ["Next.js", "Tailwind", "ShadCn"],
+    slug: "paytm-lite",
+    color: "#f0e2e1"
+},
+{
+    id: "5",
+    name: "Todo-Manager",
+    description: "A simple yet powerful task management app with categories, deadlines, and progress tracking.",
+    techStack: ["Next.js", "Tailwind", "ShadCn"],
+    slug: "Todo-Manager",
+    color: "#f0e2e1"
+},
+{
+    id: "6",
+    name: "Personal-Portfolio",
+    description: "A sleek and modern personal portfolio showcasing projects, skills, and experience in an interactive way.",
+    techStack: ["Next.js", "Tailwind", "ShadCn"],
+    slug: "portfolio",
+    color: "#f0e2e1"
+},
+{
+    id: "7",
+    name: "BruteX",
+    description: "A penetration testing tool designed for ethical hackers to automate brute-force attacks and assess security vulnerabilities.",
+    techStack: ["Next.js", "Tailwind", "ShadCn"],
+    slug: "BruteX",
+    color: "#f0e2e1"
+}
+
 ]
 
 export default function AllProjects({ projects = defaultProjects }: { projects?: Project[] }) {
@@ -147,7 +180,8 @@ function ProjectCard({
       }}
       className="group relative max-w-md"
     >
-      <Link href={`/projects/${project.slug}`} className="block lg:w-full mx-6 -z-50">
+      <Link href={`https://github.com/rishabh94033/${project.slug}` } target="_blank" 
+  rel="noopener noreferrer" className="block lg:w-full mx-6 -z-50">
         <motion.div
           animate={{
             rotateX: isActive ? rotation.x : 0,
