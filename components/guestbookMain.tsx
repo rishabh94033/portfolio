@@ -48,6 +48,9 @@ export default function GuestbookMain() {
       {/* Top Comments Section */}
       <div className="text-lg text-gray-300 font-medium mt-8">
         Here are the top comments
+        <div>
+          
+        </div>
       </div>
     </div>
   );
@@ -55,28 +58,51 @@ export default function GuestbookMain() {
 
 
 export function Form() {
+    const { data: session } = useSession();
     const [message, setMessage] = useState("");
 
 
-    const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
-        e.preventDefault();
-        
-        toast.success("Thank you for signing my guestbook!", {
-          duration: 3000, // 5 seconds
-          position: "bottom-center",
-          style: {
-            background: "#1E293B",
-            color: "#fff",
-            fontSize: "16px",
-            fontWeight: "500",
-            padding: "12px 24px",
-            borderRadius: "8px",
-          },
-          icon: "✨",
+    const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
+      e.preventDefault();
+    
+      if (!message.trim()) {
+        toast.error("Message cannot be empty!");
+        return;
+      }
+    
+      try {
+        const res = await fetch("/api/guestbook", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name: session?.user?.name, message }),
         });
     
-        setMessage("");
-      };
+        if (res.ok) {
+          toast.success("Thank you for signing my guestbook!", {
+            duration: 3000,
+            position: "bottom-center",
+            style: {
+              background: "#1E293B",
+              color: "#fff",
+              fontSize: "16px",
+              fontWeight: "500",
+              padding: "12px 24px",
+              borderRadius: "8px",
+            },
+            icon: "✨",
+          });
+    
+          setMessage(""); 
+          fetchComments();
+        } else {
+          toast.error("Failed to submit. Try again!");
+        }
+      } catch (error) {
+        console.error("Error submitting message:", error);
+        toast.error("Something went wrong!");
+      }
+    };
+    
   
     return (
       <div className="p-6">
@@ -102,3 +128,8 @@ export function Form() {
     );
   }
   
+  const fetchComments = async () => {
+    const res = await fetch("/api/guestbook");
+    const data = await res.json();
+    console.log(data); // Logs fetched comments
+  };

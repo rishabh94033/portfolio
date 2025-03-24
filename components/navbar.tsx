@@ -42,7 +42,7 @@ export default function Navbar() {
           </span>
         </li>
 
-        {/* About */}
+        {/* About
         <li className="group relative">
           <Link href="/about">
             <IoInformationCircleOutline className="text-3xl opacity-60 hover:text-blue-400" />
@@ -50,7 +50,7 @@ export default function Navbar() {
           <span className="absolute left-12 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">
             About
           </span>
-        </li>
+        </li> */}
 
         {/* Contact */}
         <li className="group relative">

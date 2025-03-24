@@ -42,7 +42,7 @@ const BackgroundMusic = () => {
   };
 
   return (
-    <button onClick={toggleMusic} className="fixed top-0 right-7 lg:top-5 lg:right-5 text-sm lg:text-lg">
+    <button onClick={toggleMusic} className="fixed top-1 right-5 lg:top-5 lg:right-5 text-sm lg:text-lg">
       {isPlaying ? "🔇 Mute" : "🔊 Play"}
     </button>
   );
