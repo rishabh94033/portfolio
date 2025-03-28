@@ -10,34 +10,33 @@ const BackgroundMusic = () => {
     audio.loop = true;
     audio.volume = 0.5;
     audioRef.current = audio;
-  
-    // Try to auto-play
+
     const playAudio = async () => {
       try {
         await audio.play();
         setIsPlaying(true);
+        document.removeEventListener("click", playAudio); // Remove listener after first interaction
       } catch (err) {
-        console.warn("Autoplay blocked. Waiting for user interaction.");
+        console.error("Autoplay blocked:", err);
       }
     };
-  
+
     document.addEventListener("click", playAudio);
-    
+
     return () => {
       document.removeEventListener("click", playAudio);
       audio.pause();
     };
   }, []);
-  
 
   const toggleMusic = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play().catch(() => console.warn("Playback error"));
-      }
-      setIsPlaying(!isPlaying);
+    if (!audioRef.current) return;
+
+    if (audioRef.current.paused) {
+      audioRef.current.play().then(() => setIsPlaying(true)).catch(() => console.warn("Playback error"));
+    } else {
+      audioRef.current.pause();
+      setIsPlaying(false);
     }
   };
 

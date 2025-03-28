@@ -3,9 +3,7 @@ import Navbar from "@/components/navbar";
 import Socials from '@/components/socials'
 import Intro from '@/components/intro'
 import LatestProjects from "@/components/latestProj";
-import SpotifyPlaylist from "@/components/playlistFixedIcon";
 import BuyMeCoffee from "@/components/buyMeCoffee";
-import ThankYouNote from "@/components/thank-you-note";
 import GitHub from "@/components/github";
 import SpotifyPlaylistBanner from "@/components/spotify-playlist-banner";
 import GuestBookSideComponent from "@/components/guestbookSideComponent";

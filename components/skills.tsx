@@ -4,9 +4,11 @@ import { cn } from "@/lib/utils"
 
 export default function Skills() {
   const [isSkillsVisible, setIsSkillsVisible] = useState(false)
+  
   const skillsRef = useRef<HTMLDivElement>(null)
-
   useEffect(() => {
+    const element = skillsRef.current;
+  if (!element) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -30,15 +32,15 @@ export default function Skills() {
   const skillCategories = [
     {
       name: "Frontend",
-      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML5", "CSS3", "JavaScript"],
+      skills: ["React", "React Native", "Next.js", "TypeScript", "Tailwind CSS", "HTML", "CSS", "JavaScript", "ShadCn"],
     },
     {
       name: "Backend",
-      skills: ["Node.js", "Express", "Python", "MongoDB", "PostgreSQL", "REST API", "GraphQL"],
+      skills: ["Node.js", "Express", "Python", "MongoDB", "PostgreSQL", "REST API", "Prisma"],
     },
     {
       name: "Tools & Others",
-      skills: ["Git", "Docker", "Figma", "AWS", "Vercel", "Jest", "CI/CD"],
+      skills: ["Git", "Docker", "Figma", "AWS", "Vercel", "CloudFlare Workers", "Linux", "Shell Scripting"],
     },
   ]
 
@@ -54,7 +56,7 @@ export default function Skills() {
     Express: "🚂",
     Python: "🐍",
     MongoDB: "🍃",
-    PostgreSQL: "🐘",
+    PostgreSQL: "◼️",
     Git: "📝",
     Docker: "🐳",
     AWS: "☁️",

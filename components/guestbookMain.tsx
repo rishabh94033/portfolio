@@ -1,11 +1,22 @@
 import { signIn, signOut } from "next-auth/react";
 import { useSession } from "next-auth/react"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
 
 
+type Comment = {
+  _id: string;
+  name: string;
+  message: string;
+  createdAt: string;
+};
 export default function GuestbookMain() {
-    const { data: session, status } = useSession()
+    const { data: session, status } = useSession();
+    const [comments, setComments] = useState<Comment[]>([]);
+    useEffect(()=>{
+      fetchComments(setComments);
+    },[]);
+    
   return (
     <div className="mt-20">
       {/* Welcome Text */}
@@ -44,11 +55,22 @@ export default function GuestbookMain() {
       ) : (
         <div className="text-lg text-blue-300 font-semibold">Please Sign in to leave a comment</div>
       )}
-     {status === "authenticated"? <Form /> : <div></div>}
+     {status === "authenticated"? <Form setComments={setComments} /> : <div></div>}
       {/* Top Comments Section */}
       <div className="text-lg text-gray-300 font-medium mt-8">
         Here are the top comments
         <div>
+          <div>
+            {comments.map((comment) => (
+              <div key={comment._id} className="p-6 ] border-gray-700 rounded-lg shadow-lg mt-4">
+                <div className="flex items-center justify-between">
+                  <div className="text-lg font-semibold text-blue-500">{comment.name}</div>
+                  <div className="text-gray-400">{new Date(comment.createdAt).toLocaleString()}</div>
+                </div>
+                <div className="text-gray-300 mt-2">{comment.message}</div>
+              </div>
+            ))}
+          </div>
           
         </div>
       </div>
@@ -57,7 +79,7 @@ export default function GuestbookMain() {
 }
 
 
-export function Form() {
+export function Form({ setComments }: { setComments: React.Dispatch<React.SetStateAction<Comment[]>> }) {
     const { data: session } = useSession();
     const [message, setMessage] = useState("");
 
@@ -93,7 +115,7 @@ export function Form() {
           });
     
           setMessage(""); 
-          fetchComments();
+          fetchComments(setComments);
         } else {
           toast.error("Failed to submit. Try again!");
         }
@@ -128,8 +150,10 @@ export function Form() {
     );
   }
   
-  const fetchComments = async () => {
+  const fetchComments = async (setComments: React.Dispatch<React.SetStateAction<Comment[]>>) => {
     const res = await fetch("/api/guestbook");
     const data = await res.json();
+    setComments(data);
     console.log(data); // Logs fetched comments
   };
+
