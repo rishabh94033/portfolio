@@ -1,18 +1,19 @@
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/prisma"; 
+import { NextResponse } from "next/server";
 
-const prisma = new PrismaClient();
 
 export async function GET() {
     try {
-        const comments = await prisma.guestbookEntry.findMany({
-            orderBy: { createdAt: "desc" },
-        });
-        return Response.json(comments);
+      const comments = await prisma.guestbookEntry.findMany({
+        orderBy: { createdAt: "desc" },
+      });
+  
+      return NextResponse.json(comments, { status: 200 });
     } catch (error) {
-        console.error("Error fetching comment:", error);
-        return new Response(JSON.stringify({ error: "Failed to fetch comments" }), { status: 500 });
+      console.error("Error fetching comments:", error);
+      return NextResponse.json({ error: "Failed to fetch comments" }, { status: 500 });
     }
-}
+  }
 
 export async function POST(req: Request) {
     try {
