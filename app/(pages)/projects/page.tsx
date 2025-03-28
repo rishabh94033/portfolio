@@ -44,7 +44,7 @@ export default function Projects() {
           <AllProjects />
         </div>
       </div>
-      <div className="lg:mt-64 lg:ml-80 lg:pr-16 pl-5 pr-3 pb-24">  {/*// right main div*/}
+      <div className="lg:mt-64 lg:ml-80 lg:pr-6 pl-5 pr-3 pb-24">  {/*// right main div*/}
         <div>
           <SpotifyPlaylistBanner />
         </div> 

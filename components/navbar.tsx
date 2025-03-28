@@ -7,18 +7,15 @@ import { IoMdBook } from "react-icons/io";
 
 export default function Navbar() {
   return (
-    <nav className="flex lg:pt-5 lg:pb-5 lg:max-w-44 items-center justify-center lg:border-gray-800 lg:border-r-2 outline-blue-950 flex-row lg:flex-col lg:bg-gray-950 z-50 bg-blue-850 
-      lg:bg-none bg-gradient-to-r from-gray-900 to-gray-950 lg:min-h-screen min-h-[70vh]">
+    <nav className="flex lg:pt-5 lg:pb-5 lg:max-w-44 items-center justify-center lg:border-gray-800 lg:border-0 lg:border-r-2 outline-blue-950 flex-row lg:flex-col lg:bg-gray-950 z-50 bg-blue-850 
+      lg:bg-none bg-gradient-to-r from-gray-900 to-gray-950 lg:min-h-screen min-h-[70vh] border-2 border-gray-800">
       
-      <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-gray-700 hidden lg:block">
-        {/* <Image 
-          src="/profile.jpg" // Change to your actual image path
-          alt="Profile Picture"
-          width={64} 
-          height={64} 
-          className="object-cover w-full h-full"
-        /> */}
-      </div>
+      <div
+  className="w-16 h-16 rounded-full border-2 border-gray-700 shadow-md hover:shadow-blue-500/50 transition-all duration-300 hidden lg:block bg-cover bg-center bg-no-repeat opacity-90"
+  style={{ backgroundImage: "url('/pfp_portfolio.webp')" }}
+>
+</div>
+
 
       <ul className="justify-center lg:gap-12 gap-7 flex flex-row lg:flex-col lg:min-h-screen min-h-[70vh] lg:-mt-8 pt-3">
         {/* Home */}

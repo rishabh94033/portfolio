@@ -17,7 +17,7 @@ const [fontSize, setFontSize] = useState(17);
         setFontSize(12);
         
       } else {
-        setBlockSize(17);
+        setBlockSize(16);
         setFontSize(15);
       }
     };

@@ -57,21 +57,26 @@ export default function GuestbookMain() {
       )}
      {status === "authenticated"? <Form setComments={setComments} /> : <div></div>}
       {/* Top Comments Section */}
-      <div className="text-lg text-gray-300 font-medium mt-8">
-        Here are the top comments
+      <div className=" text-gray-300 font-medium mt-8 ">
+        <div className="text-2xl font-semibold text-gray-400">
+      Here are the <span className="text-gray-300">top comments</span>
+      </div>
         <div>
-          <div>
+
+         
+          <div className="">
             {comments.map((comment) => (
               <div key={comment._id} className="p-6 ] border-gray-700 rounded-lg shadow-lg mt-4">
                 <div className="flex items-center justify-between">
                   <div className="text-lg font-semibold text-blue-500">{comment.name}</div>
                   <div className="text-gray-400">{new Date(comment.createdAt).toLocaleString()}</div>
                 </div>
-                <div className="text-gray-300 mt-2">{comment.message}</div>
+                <div className="text-gray-300 mt-2 text-lg">{comment.message}</div>
               </div>
             ))}
           </div>
           
+            
         </div>
       </div>
     </div>
@@ -130,7 +135,7 @@ export function Form({ setComments }: { setComments: React.Dispatch<React.SetSta
       <div className="p-6">
          <Toaster /> 
 
-        <form onSubmit={handleSubmit} className="">
+        <form onSubmit={handleSubmit} className="-ml-5">
           <input
             type="text"
             placeholder="Write something kind..."
@@ -141,7 +146,7 @@ export function Form({ setComments }: { setComments: React.Dispatch<React.SetSta
           />
           <button
             type="submit"
-            className="px-6 py-2 ml-5 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-500 transition-all"
+            className="px-6 py-2 lg:ml-5 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-500 transition-all"
           >
             Send ❤️
           </button>

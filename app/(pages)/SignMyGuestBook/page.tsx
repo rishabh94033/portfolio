@@ -14,7 +14,7 @@ export default function SignMyGuestBook() {
     <div className="lg:ml-44  pl-6 lg:pl-20 bg-gray-950">  {/*// middle main div*/} 
         <GuestbookMain/>
     </div>
-     <div className="lg:mt-64 lg:ml-80 lg:pr-16 pl-5 pr-3 pb-24">  {/*// right main div*/}
+     <div className="lg:mt-64 lg:ml-80 lg:pr-8 pl-5 pr-3 pb-24">  {/*// right main div*/}
             <div>
               <SpotifyPlaylistBanner />
             </div> 

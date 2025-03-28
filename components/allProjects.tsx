@@ -36,7 +36,7 @@ const defaultProjects: Project[] = [
   },
   {
     id: "3",
-    name: "Battery-Managent-System-for-Vehicle",
+    name: "BMS",
     description: "A smart battery management system for vehicles that monitors performance, predicts maintenance needs, and optimizes efficiency.",
     techStack: ["Next.js", "Tailwind", "ShadCn"],
     slug: "Battery-Managent-System-for-Vehicle",
