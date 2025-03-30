@@ -22,7 +22,7 @@ const defaultProjects: Project[] = [
     id: "1",
     name: "GenMedX",
     description: "GenMedX is a smart medical records app with AI-powered insights, document scanning, and seamless prescription tracking.",
-    techStack: ["React Native", "TypeScript", "Prisma"],
+    techStack: ["React Native", "TypeScript", "Prisma", "Redux", "Tesseract"],
     slug: "GenMedX",
     color: "#f0e2e1",
   },
@@ -46,7 +46,7 @@ const defaultProjects: Project[] = [
     id: "4",
     name: "Paytm-Lite",
     description: "A lightweight version of Paytm with essential features like payments, wallet management, and transaction history.",
-    techStack: ["Next.js", "Tailwind", "ShadCn"],
+    techStack: ["React", "Tailwind", "Node.js", "Express"],
     slug: "paytm-lite",
     color: "#f0e2e1"
 },
@@ -54,7 +54,7 @@ const defaultProjects: Project[] = [
     id: "5",
     name: "Todo-Manager",
     description: "A simple yet powerful task management app with categories, deadlines, and progress tracking.",
-    techStack: ["Next.js", "Tailwind", "ShadCn"],
+    techStack: ["React", "Tailwind", "Mognodb"],
     slug: "Todo-Manager",
     color: "#f0e2e1"
 },
@@ -62,7 +62,7 @@ const defaultProjects: Project[] = [
     id: "6",
     name: "Personal-Portfolio",
     description: "A sleek and modern personal portfolio showcasing projects, skills, and experience in an interactive way.",
-    techStack: ["Next.js", "Tailwind", "ShadCn"],
+    techStack: ["Next.js", "Tailwind", "ShadCn", "Framer Motion", "Oauth"],
     slug: "portfolio",
     color: "#f0e2e1"
 },
@@ -70,7 +70,7 @@ const defaultProjects: Project[] = [
     id: "7",
     name: "BruteX",
     description: "A penetration testing tool designed for ethical hackers to automate brute-force attacks and assess security vulnerabilities.",
-    techStack: ["Next.js", "Tailwind", "ShadCn"],
+    techStack: ["Python", "Flask", "Selenium", "HTML", "CSS"],
     slug: "BruteX",
     color: "#f0e2e1"
 }

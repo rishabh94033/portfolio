@@ -2,7 +2,7 @@
 export default function SpotifyPlaylistBanner() {
     return (
 <a 
-            href="https://open.spotify.com/playlist/37i9dQZF1DX0BcQWzuB7ZO" 
+            href="https://open.spotify.com/playlist/4kdDjRZXAOqZA4Jj0OZ9Gz?si=7T8UbER9RZSNN1wceSNAeg" 
             target="_blank" 
             rel="noopener noreferrer"
         >
