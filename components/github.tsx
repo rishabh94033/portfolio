@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import GitHubCalendar from "react-github-calendar";
 export default function GitHub() {
 
-const [blockSize, setBlockSize] = useState(17);
-const [fontSize, setFontSize] = useState(17);
+const [blockSize, setBlockSize] = useState(13);
+const [fontSize, setFontSize] = useState(15);
 
   useEffect(() => {
     const updateBlockSize = () => {
@@ -17,7 +17,7 @@ const [fontSize, setFontSize] = useState(17);
         setFontSize(12);
         
       } else {
-        setBlockSize(16);
+        setBlockSize(13);
         setFontSize(15);
       }
     };
