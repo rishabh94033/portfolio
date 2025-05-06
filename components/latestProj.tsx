@@ -81,7 +81,7 @@ export default function LatestProjects({ projects = defaultProjects }: { project
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-2xl lg:text-4xl md:text-4xl font-bold tracking-tight"
+              className="text-2xl lg:text-3xl md:text-3xl font-bold tracking-tight"
             >
               Featured Projects
             </motion.h2>
@@ -101,7 +101,7 @@ export default function LatestProjects({ projects = defaultProjects }: { project
         <div
           ref={containerRef}
           onMouseMove={handleMouseMove}
-          className="relative grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl lg:ml-0"
+          className="relative grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[700px] lg:ml-0"
           >
           {projects.map((project, index) => (
               <ProjectCard
@@ -227,7 +227,7 @@ function ProjectCard({
             </div>
 
             <motion.h3
-              className="lg:text-3xl text-2xl font-bold mb-3 text-white group-hover:text-white transition-colors duration-300"
+              className="lg:text-2xl text-2xl font-bold mb-3 text-white group-hover:text-white transition-colors duration-300"
               style={{
                 textShadow: isActive ? `0 0 20px ${project.color}30` : "none",
               }}
@@ -235,7 +235,7 @@ function ProjectCard({
               {project.name}
             </motion.h3>
 
-            <p className="text-gray-400 lg:mb-8  mb-4 text-lg group-hover:text-gray-300 transition-colors duration-300 max-w-2xl">
+            <p className="text-gray-400 lg:mb-8  mb-4 text-md group-hover:text-gray-300 transition-colors duration-300 max-w-2xl">
               {project.description}
             </p>
           </div>

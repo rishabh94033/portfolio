@@ -29,7 +29,7 @@ const [fontSize, setFontSize] = useState(17);
     return () => window.removeEventListener("resize", updateBlockSize);
   }, []);
   return(
-  <div className="flex justify-center w-full">
+  <div className="flex justify-center w-[900px]">
       <div className="w-full lg:mt-20 mt-5  hover:scale-105 hover:shadow-sm transition-all duration-300">
              <GitHubCalendar username="rishabh94033"
              year={2025}

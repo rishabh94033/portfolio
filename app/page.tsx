@@ -13,7 +13,7 @@ export default function Home() {
   
   return (
     
-    <div className="bg-gray-950 flex flex-col lg:flex-row"> {/*//main div*/}
+    <div className="bg-gray-950 flex flex-col lg:flex-row w-full h-full"> {/*//main div*/}
       <div className="fixed -bottom-4 w-full h-20 lg:top-0 lg:left-0 lg:w-44 lg:h-screen z-50 "> 
       <Navbar></Navbar>
       </div>
@@ -41,7 +41,7 @@ export default function Home() {
 </div>
 
     </div>
-    <div className="lg:mt-96 lg:pr-10 lg:pl-0 pl-8 pr-8 pb-24"> {/*// right main div*/}
+    <div className="lg:mt-96 lg:pr-10 lg:pl-0 pl-8 pr-8 pb-24 w-[200px]"> {/*// right main div*/}
     <div>
   <SpotifyPlaylistBanner />
 </div>

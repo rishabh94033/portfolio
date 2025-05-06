@@ -7,7 +7,7 @@ export default function SpotifyPlaylistBanner() {
             rel="noopener noreferrer"
         >
                     <div
-            className="relative p-3 rounded-2xl shadow-xl border border-gray-800 text-white text-center overflow-hidden lg:w-[350px] lg:h-64 lg:ml-12"
+            className="relative p-3 rounded-2xl shadow-xl border border-gray-800 text-white text-center overflow-hidden lg:w-[300px] lg:h-64 lg:ml-12"
         >
             {/* Background Image */}
             <div 
@@ -17,10 +17,10 @@ export default function SpotifyPlaylistBanner() {
 
             {/* Content */}
             <div className="relative z-10">
-                <h1 className="text-4xl font-extrabold tracking-wide text-gray-100 pt-4 pb-2">
+                <h1 className="text-3xl font-extrabold tracking-wide text-gray-100 pt-4 pb-2">
                  Coffee <span className=" font-medium " >playlist</span> ☕
                 </h1>
-                <p className="text-lg mt-3 text-gray-100">
+                <p className="text-md mt-3 text-gray-100">
                     A mix of songs I keep coming back to—some bring back memories, 
                     some just sound too good to skip. No matter the mood, 
                     there’s always something in here that feels right.
