@@ -14,7 +14,7 @@ export default function Resume() {
     <div className="fixed -bottom-4  w-full h-20 lg:top-0 lg:left-0 lg:w-44 lg:h-screen z-50  ">
           <Navbar></Navbar>
           </div>
-    <div className="lg:ml-44 lg:pl-20 pl-5 pr-3 mt-16"> {/*// middle main div*/}
+    <div className="lg:ml-44 lg:pl-20 pl-5 pr-3 mt-16 lg:h-full"> {/*// middle main div*/}
     <div className="max-w-4xl mx-auto absolute lg:top-20 top-7 right-4 z-50">
         {/* Header with Download Button */}
         <div className=" mb-12">

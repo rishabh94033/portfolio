@@ -17,7 +17,7 @@ export default function Home() {
       <div className="fixed -bottom-4 w-full h-20 lg:top-0 lg:left-0 lg:w-44 lg:h-screen z-50 "> 
       <Navbar></Navbar>
       </div>
-    <div className="lg:ml-44 lg:pl-20 pl-5 pr-3"> {/*// middle main div*/} 
+    <div className="lg:ml-44 lg:pl-20 pl-5 pr-3 lg:h-full"> {/*// middle main div*/} 
       <div>
         <GitHub/>
       </div>
@@ -41,7 +41,7 @@ export default function Home() {
 </div>
 
     </div>
-    <div className="lg:mt-96 lg:pr-10 lg:pl-0 pl-8 pr-8 pb-24 w-[200px]"> {/*// right main div*/}
+    <div className="lg:mt-96 lg:pr-10 lg:ml-80 lg:pl-0 pl-8 pr-8 pb-24 lg:w-[200px]"> {/*// right main div*/}
     <div>
   <SpotifyPlaylistBanner />
 </div>

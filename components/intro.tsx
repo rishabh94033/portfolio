@@ -1,6 +1,6 @@
 export default function Intro() {
   return (
-      <div className="w-[850px]">
+      <div className="lg:w-[850px]">
           <div className="lg:mt-16 mt-6 lg:text-2xl text-md overflow-y-auto flex-grow">
               Hi, I am <span className="text-blue-500 lg:text-2xl text-xl font-medium">Rishabh</span>
           </div>

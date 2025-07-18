@@ -1,7 +1,7 @@
 export default function GuestBookSideComponent() {
     return (
       <div
-        className="relative p-6 border-2 border-gray-700 rounded-2xl shadow-lg bg-cover bg-center text-gray-700 mt-8 lg:w-[300px] lg:ml-12"
+        className="relative p-6 border-2 border-gray-700 rounded-2xl shadow-lg bg-cover bg-center text-gray-700 mt-8 lg:w-[350px] lg:h-[250px] lg:ml-12 flex items-center justify-center"
         style={{ backgroundImage: "url('/guestbook_img.jpg')" }} 
       >
         <div className="backdrop-blur-lg bg-black/10 p-4 rounded-2xl">

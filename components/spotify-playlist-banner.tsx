@@ -7,7 +7,7 @@ export default function SpotifyPlaylistBanner() {
             rel="noopener noreferrer"
         >
                     <div
-            className="relative p-3 rounded-2xl shadow-xl border border-gray-800 text-white text-center overflow-hidden lg:w-[300px] lg:h-64 lg:ml-12"
+            className="relative p-3 rounded-2xl shadow-xl border border-gray-800 text-white text-center overflow-hidden lg:w-[350px] lg:h-[250px] lg:ml-12"
         >
             {/* Background Image */}
             <div 

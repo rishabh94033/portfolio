@@ -13,7 +13,7 @@ export default function Projects() {
     <Navbar />
       </div>
 
-      <div className="lg:ml-44  pl-6 lg:pl-20 bg-gray-950">  {/*// middle main div*/} 
+      <div className="lg:ml-44 lg:h-full  pl-6 lg:pl-20 bg-gray-950">  {/*// middle main div*/} 
         <motion.div 
           className="lg:text-6xl text-4xl lg:pt-24  pt-10 font-semibold text-white"
           initial={{ opacity: 0, y: -50, scale: 0.8 }}
@@ -44,7 +44,7 @@ export default function Projects() {
           <AllProjects />
         </div>
       </div>
-      <div className="lg:mt-64 lg:ml-80 lg:pr-6 pl-5 pr-3 pb-24">  {/*// right main div*/}
+      <div className="lg:mt-64 lg:ml-[450px]  pl-5 pr-3 pb-24">  {/*// right main div*/}
         <div>
           <SpotifyPlaylistBanner />
         </div> 
